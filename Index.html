@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt" class="theme_switchable">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
+    <link rel='stylesheet' href='https://static.fontawesome.com/css/fontawesome-app.css'>
+    <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="options">
+        <div class="option" style="--optionBackground:url(img/background-image-home.jpg);">
+            <div class="btn-center hide ml-40" >
+                <a href="https://auth.monday.com/auth/login_monday/" target="_blank" class="btn btn-app" style="color: #ED5565;">
+                    <i class="fa fa-home" style="color: #ED5565;"></i>
+                    <p>Monday</p>
+                </a>
+            </div>
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fa fa-home"></i>
+                </div>
+                <div class="info">
+                    <div class="main">Home</div>
+                    <div class="sub">Monday</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="option active" style="--optionBackground: url(img/background-image-inbox.jpg);">
+            <div class="btn-center"">
+                <a href="https://localhost:44348/Inbox" class="btn btn-app" style="color: #FC6E51;">
+                    <!-- <span class="badge bg-success" >300</span> -->
+                    <i class="fas fa-envelope" style="color: #FC6E51;"></i>
+                    <p>Inbox</p>
+                </a>
+            </div>     
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info">
+                    <div class="main">Inbox</div>
+                    <div class="sub">E-mails | Informativos | Comunicados</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="option" style="--optionBackground: url(img/background-image-doctor-help.jpg);">
+            <div class="btn-center hide ml-40">
+                <a class="btn btn-app" style="color: #FFCE54;">
+                    <span class="badge bg-success">em breve</span>
+                    <i class="fas fa-globe" style="color: #FFCE54;"></i>
+                    <p>Acessar</p>
+                </a>
+            </div>
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fa fa-globe"></i>
+                </div>
+                <div class="info">
+                    <div class="main">Sistema das Clínicas</div>
+                    <div class="sub">Acessar</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="option" style="--optionBackground: url(img/background-comunicacao.jpg);">
+            <div class="shadow"></div>
+            <div class="btn-center hide ml-25">
+                <a href="https://localhost:44348/BibliotecaVideos" class="btn btn-app" style="color: #2ECC71;">
+                    <i class="fa fa-book" style="color: #2ECC71;"></i>
+                    <p>Biblioteca</p>
+                </a>
+
+                <a href="https://localhost:44348/Campanha" class="btn btn-app" style="color: #2ECC71;">
+                    <i class="fa fa-magic" style="color: #2ECC71;"></i>
+                    <p>Campanha</p>
+                </a>
+
+                <a href="https://localhost:44348/Arquivos" class="btn btn-app" style="color: #2ECC71;">
+                    <i class="fa fa-archive" style="color: #2ECC71;"></i>
+                    <p>Arquivos</p>
+                </a>
+            </div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                </div>
+                <div class="info">
+                    <div class="main">Comunicação</div>
+                    <div class="sub">Biblioteca | Campanha | Arquivos</div>
+                </div>
+            </div>
+        </div>
+        <div class="option" style="--optionBackground: url(img/background-universidade.jpg);">
+            <div class="btn-center hide ml-40">
+                <a class="btn btn-app" style="color: #5D9CEC;">
+                    <span class="badge bg-success" >em breve</span> 
+                    <i class="fa fa-user-times" style="color: #5D9CEC;"></i>
+                    <p>Acessar</p>
+                </a>
+            </div>
+            <div class="shadow"></div>
+            <div class="label">
+                <div class="icon">
+                    <i class="fa fa-book"></i>
+                </div>
+                <div class="info">
+                    <div class="main">Universidade</div>
+                    <div class="sub">EM BREVE</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script>
+        $(".option").click(function () {            
+            $(".option").removeClass("active");
+            $(this).addClass("active");
+
+            $('.btn-center').hide();
+            $(this).children('div.btn-center').show();
+        });
+    </script>
+
+</body>
+</html>
